@@ -1,0 +1,71 @@
+{
+  "acceptance": {
+    "estimate_rmse_below_measurement_rmse": true,
+    "estimate_rmse_max": 0.5
+  },
+  "artifacts": [
+    "control_benchmarks/kalman_estimation/results/kalman_estimation/result.json",
+    "control_benchmarks/kalman_estimation/results/kalman_estimation/estimation.png",
+    "control_benchmarks/kalman_estimation/results/kalman_estimation/estimation.mat"
+  ],
+  "benchmark": "kalman_estimation",
+  "limitations": [
+    "A base-MATLAB covariance-form Kalman filter is used so the benchmark remains runnable without Control System Toolbox."
+  ],
+  "metrics": {
+    "estimate_rmse": "<= 0.5",
+    "estimate_rmse_comparison": "< measurement_rmse"
+  },
+  "model": {
+    "A": [
+      [
+        1,
+        0.1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "B": [
+      [
+        0
+      ],
+      [
+        0.1
+      ]
+    ],
+    "C": [
+      [
+        1,
+        0
+      ]
+    ],
+    "Ts": 0.1,
+    "type": "discrete_state_space"
+  },
+  "parameters": {
+    "measurement_noise_variance": 0.04,
+    "process_noise_covariance": [
+      [
+        0.0025,
+        0
+      ],
+      [
+        0,
+        0.0025
+      ]
+    ],
+    "samples": 120
+  },
+  "prepared_at": "2026-07-15T07:37:11.975605+00:00",
+  "project_root": "D:\\CodexData\\tasks\\MatlabAgent-ControlBench-DynamicTest-20260715\\W01_control_benchmarks\\source\\tests\\matlab_assets",
+  "required_products": [
+    "MATLAB"
+  ],
+  "result": "control_benchmarks/kalman_estimation/results/kalman_estimation/result.json",
+  "schema_version": "control-benchmarks.v1",
+  "script": "control_benchmarks/kalman_estimation/run_kalman_estimation.m",
+  "script_kind": "kalman",
+  "seed": 303
+}

@@ -1,0 +1,64 @@
+{
+  "acceptance": {
+    "feasible_fraction_min": 0.95,
+    "max_input_violation_max": 1e-09
+  },
+  "artifacts": [
+    "control_benchmarks/mpc_constraints/results/mpc_constraints/result.json",
+    "control_benchmarks/mpc_constraints/results/mpc_constraints/closed_loop.png",
+    "control_benchmarks/mpc_constraints/results/mpc_constraints/closed_loop.mat"
+  ],
+  "benchmark": "mpc_constraints",
+  "limitations": [
+    "Requires MPC Toolbox and a valid license; execution failures must be reported rather than converted to success."
+  ],
+  "metrics": {
+    "feasible_fraction": ">= 0.95",
+    "max_input_violation": "<= 1e-9"
+  },
+  "model": {
+    "A": [
+      [
+        1,
+        0.1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "B": [
+      [
+        0
+      ],
+      [
+        0.1
+      ]
+    ],
+    "Ts": 0.1,
+    "type": "discrete_state_space"
+  },
+  "parameters": {
+    "control_horizon": 3,
+    "input_bounds": [
+      -1,
+      1
+    ],
+    "output_bounds": [
+      -2,
+      2
+    ],
+    "prediction_horizon": 10
+  },
+  "prepared_at": "2026-07-15T07:37:11.979157+00:00",
+  "project_root": "D:\\CodexData\\tasks\\MatlabAgent-ControlBench-DynamicTest-20260715\\W01_control_benchmarks\\source\\tests\\matlab_assets",
+  "required_products": [
+    "MATLAB",
+    "MPC Toolbox"
+  ],
+  "result": "control_benchmarks/mpc_constraints/results/mpc_constraints/result.json",
+  "schema_version": "control-benchmarks.v1",
+  "script": "control_benchmarks/mpc_constraints/run_mpc_constraints.m",
+  "script_kind": "mpc",
+  "seed": 404
+}

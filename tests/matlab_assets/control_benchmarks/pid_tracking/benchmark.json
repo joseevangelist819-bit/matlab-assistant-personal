@@ -1,0 +1,42 @@
+{
+  "acceptance": {
+    "overshoot_percent_max": 25.0,
+    "settling_time_seconds_max": 6.0,
+    "stable": true,
+    "steady_state_error_max": 0.05
+  },
+  "artifacts": [
+    "control_benchmarks/pid_tracking/results/pid_tracking/result.json",
+    "control_benchmarks/pid_tracking/results/pid_tracking/response.png",
+    "control_benchmarks/pid_tracking/results/pid_tracking/response.mat"
+  ],
+  "benchmark": "pid_tracking",
+  "limitations": [
+    "Uses a fixed unit-step reference and a nominal second-order plant."
+  ],
+  "metrics": {
+    "overshoot_percent": "<= 25",
+    "settling_time_seconds": "<= 6",
+    "steady_state_error": "<= 0.05"
+  },
+  "model": {
+    "transfer_function": "1/(s^2+2s+1)",
+    "type": "second_order"
+  },
+  "parameters": {
+    "duration": 8.0,
+    "reference": 1.0,
+    "sample_time": 0.01
+  },
+  "prepared_at": "2026-07-15T07:37:11.965901+00:00",
+  "project_root": "D:\\CodexData\\tasks\\MatlabAgent-ControlBench-DynamicTest-20260715\\W01_control_benchmarks\\source\\tests\\matlab_assets",
+  "required_products": [
+    "MATLAB",
+    "Control System Toolbox"
+  ],
+  "result": "control_benchmarks/pid_tracking/results/pid_tracking/result.json",
+  "schema_version": "control-benchmarks.v1",
+  "script": "control_benchmarks/pid_tracking/run_pid_tracking.m",
+  "script_kind": "pid",
+  "seed": 101
+}

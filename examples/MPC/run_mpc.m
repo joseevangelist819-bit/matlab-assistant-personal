@@ -1,0 +1,3 @@
+root=fileparts(mfilename('fullpath'));Ts=0.1;plant=c2d(ss(tf(1,[1 1])),Ts);controller=mpc(plant,Ts,12,3);controller.MV.Min=-2;controller.MV.Max=2;
+reference=ones(40,1);y=sim(controller,40,reference);result=struct('prediction_horizon',controller.PredictionHorizon,'control_horizon',controller.ControlHorizon,'final_error',abs(1-y(end)),'finite',all(isfinite(y)));
+save(fullfile(root,'result.mat'),'result','y','reference','controller');figure('Visible','off');plot(y,'LineWidth',1.3);hold on;plot(reference,'--');grid on;legend('output','reference');exportgraphics(gcf,fullfile(root,'result.png'));close(gcf);

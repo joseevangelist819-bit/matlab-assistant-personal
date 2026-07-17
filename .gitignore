@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# MATLAB / Simulink generated state
+.matlab-agent/
+slprj/
+codegen/
+*.slxc
+*.asv
+*.autosave
+
+# Compiled and generated binaries
+build/
+dist/
+*.obj
+*.o
+*.mexw64
+*.exe
+*.dll
+*.lib
+*.exp
+*.ilk
+
+# Runtime output and local state
+*.log
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+artifacts/
+results/
+examples/**/result.mat
+00_matlab任务结果/
+安装缓存/
+工具链/
+应用程序/
+配置备份/
+验证证据/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+config.local.*
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

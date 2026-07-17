@@ -1,0 +1,9 @@
+{
+  "provider": "MathWorks",
+  "compiler": "MinGW-w64",
+  "version": "8.1.0",
+  "release_range": "R2023a-R2025b",
+  "mingw_root": "D:\\MATLAB兼容入口\\MATLAB_MINGW81",
+  "matlab_root_compat": "D:\\MATLAB兼容入口\\MATLAB_R2025B",
+  "source": "https://ssd.mathworks.com/supportfiles/downloads/SupportPackageThirdParty/R2023b/mingw_w64/win64/mingw81.zip"
+}

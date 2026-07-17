@@ -1,0 +1,83 @@
+{
+  "acceptance": {
+    "closed_loop_stable": true,
+    "final_state_norm_max": 0.05,
+    "peak_control_max": 10.0
+  },
+  "artifacts": [
+    "control_benchmarks/lqr_regulation/results/lqr_regulation/result.json",
+    "control_benchmarks/lqr_regulation/results/lqr_regulation/regulation.png",
+    "control_benchmarks/lqr_regulation/results/lqr_regulation/regulation.mat"
+  ],
+  "benchmark": "lqr_regulation",
+  "limitations": [
+    "Full-state feedback is assumed; no actuator saturation is simulated."
+  ],
+  "metrics": {
+    "closed_loop_stable": true,
+    "final_state_norm": "<= 0.05",
+    "peak_control": "<= 10"
+  },
+  "model": {
+    "A": [
+      [
+        0,
+        1
+      ],
+      [
+        -2,
+        -0.5
+      ]
+    ],
+    "B": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "C": [
+      [
+        1,
+        0
+      ]
+    ],
+    "D": [
+      [
+        0
+      ]
+    ],
+    "type": "state_space"
+  },
+  "parameters": {
+    "Q": [
+      [
+        10,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "R": [
+      [
+        0.5
+      ]
+    ],
+    "duration": 6.0,
+    "sample_time": 0.01
+  },
+  "prepared_at": "2026-07-15T07:37:11.970575+00:00",
+  "project_root": "D:\\CodexData\\tasks\\MatlabAgent-ControlBench-DynamicTest-20260715\\W01_control_benchmarks\\source\\tests\\matlab_assets",
+  "required_products": [
+    "MATLAB",
+    "Control System Toolbox"
+  ],
+  "result": "control_benchmarks/lqr_regulation/results/lqr_regulation/result.json",
+  "schema_version": "control-benchmarks.v1",
+  "script": "control_benchmarks/lqr_regulation/run_lqr_regulation.m",
+  "script_kind": "lqr",
+  "seed": 202
+}

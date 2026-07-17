@@ -1,0 +1,59 @@
+{
+  "acceptance": {
+    "fit_percent_min": 70.0,
+    "validation_rmse_max": 0.2
+  },
+  "artifacts": [
+    "control_benchmarks/system_identification/results/system_identification/result.json",
+    "control_benchmarks/system_identification/results/system_identification/identification.png",
+    "control_benchmarks/system_identification/results/system_identification/data.mat"
+  ],
+  "benchmark": "system_identification",
+  "limitations": [
+    "Requires System Identification Toolbox and a valid license; no success is claimed without a real estimate and validation run."
+  ],
+  "metrics": {
+    "fit_percent": ">= 70",
+    "validation_rmse": "<= 0.2"
+  },
+  "model": {
+    "A": [
+      [
+        0.92
+      ]
+    ],
+    "B": [
+      [
+        0.08
+      ]
+    ],
+    "C": [
+      [
+        1
+      ]
+    ],
+    "D": [
+      [
+        0
+      ]
+    ],
+    "Ts": 0.1,
+    "type": "first_order_discrete"
+  },
+  "parameters": {
+    "input_amplitude": 1.0,
+    "samples": 200,
+    "train_fraction": 0.7
+  },
+  "prepared_at": "2026-07-15T07:37:11.983841+00:00",
+  "project_root": "D:\\CodexData\\tasks\\MatlabAgent-ControlBench-DynamicTest-20260715\\W01_control_benchmarks\\source\\tests\\matlab_assets",
+  "required_products": [
+    "MATLAB",
+    "System Identification Toolbox"
+  ],
+  "result": "control_benchmarks/system_identification/results/system_identification/result.json",
+  "schema_version": "control-benchmarks.v1",
+  "script": "control_benchmarks/system_identification/run_system_identification.m",
+  "script_kind": "identification",
+  "seed": 505
+}

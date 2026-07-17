@@ -1,0 +1,41 @@
+{
+  "schema": "workflow-unattended-policy.v1",
+  "mode": "safe_unattended",
+  "auto_allow": [
+    "project_root_read",
+    "project_root_write_declared_artifacts",
+    "computation",
+    "simulation",
+    "tests",
+    "temporary_files",
+    "reports"
+  ],
+  "auto_deny": [
+    "software_update",
+    "dependency_install",
+    "login",
+    "telemetry",
+    "credential_use",
+    "network_access",
+    "external_path_write",
+    "production_change",
+    "database_migration",
+    "real_hardware",
+    "firmware_flash",
+    "device_reset",
+    "irreversible_delete"
+  ],
+  "matlab": {
+    "desktop": false,
+    "figure_windows": false,
+    "interactive_dialogs": false,
+    "updates": "deny",
+    "batch_fallback": true
+  },
+  "codex": {
+    "approval_policy": "never",
+    "sandbox": "danger-full-access",
+    "scope_required": true,
+    "accept_safe_project_requests": true
+  }
+}

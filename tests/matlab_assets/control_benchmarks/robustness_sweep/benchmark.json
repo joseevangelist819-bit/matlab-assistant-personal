@@ -1,0 +1,48 @@
+{
+  "acceptance": {
+    "stable_fraction_min": 1.0,
+    "worst_overshoot_percent_max": 35.0
+  },
+  "artifacts": [
+    "control_benchmarks/robustness_sweep/results/robustness_sweep/result.json",
+    "control_benchmarks/robustness_sweep/results/robustness_sweep/sweep.png",
+    "control_benchmarks/robustness_sweep/results/robustness_sweep/sweep.mat"
+  ],
+  "benchmark": "robustness_sweep",
+  "limitations": [
+    "A fixed 3x3 damping/gain grid is used; unmodelled nonlinearities are out of scope."
+  ],
+  "metrics": {
+    "stable_fraction": ">= 1",
+    "worst_overshoot_percent": "<= 35"
+  },
+  "model": {
+    "nominal": "1/(s^2+2s+1)",
+    "type": "second_order_parameter_grid"
+  },
+  "parameters": {
+    "damping_values": [
+      0.8,
+      1.0,
+      1.2
+    ],
+    "duration": 8.0,
+    "gain_values": [
+      0.8,
+      1.0,
+      1.2
+    ],
+    "sample_time": 0.01
+  },
+  "prepared_at": "2026-07-15T07:37:11.989215+00:00",
+  "project_root": "D:\\CodexData\\tasks\\MatlabAgent-ControlBench-DynamicTest-20260715\\W01_control_benchmarks\\source\\tests\\matlab_assets",
+  "required_products": [
+    "MATLAB",
+    "Control System Toolbox"
+  ],
+  "result": "control_benchmarks/robustness_sweep/results/robustness_sweep/result.json",
+  "schema_version": "control-benchmarks.v1",
+  "script": "control_benchmarks/robustness_sweep/run_robustness_sweep.m",
+  "script_kind": "robustness",
+  "seed": 606
+}
